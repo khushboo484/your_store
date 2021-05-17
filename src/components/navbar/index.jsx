@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { BrandLogo } from "../brandLogo";
+import  WishList  from "../../images/logos/wishlist.png";
+import Cart from "../../images/logos/cart.png";
 import { Button } from "../button";
 import { Marginer } from "../marginer";
 
@@ -17,7 +19,18 @@ const NavbarContainer = styled.div`
   padding: 0 1.5em;
 
   background-color: ${({ useTransparent }) =>
-    useTransparent ? "transparent" : "#264653"};
+    useTransparent ? "transparent" : "#98FB98"};
+`;
+
+const ListImage = styled.div`
+  width: ${({ size }) => (size ? size + "px" : "3em")};
+  height: ${({ size }) => (size ? size + "px" : "3em")};
+  padding-top: 4px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const AccessibilityContainer = styled.div`
@@ -28,7 +41,8 @@ const AccessibilityContainer = styled.div`
 
 const AnchorLink = styled(Link)`
   font-size: 12px;
-  color: #fff;
+  font-weight: 400px;
+  color: #000000;
   cursor: pointer;
   text-decoration: none;
   outline: none;
@@ -39,14 +53,9 @@ const AnchorLink = styled(Link)`
   }
 `;
 
-const Seperator = styled.div`
-  min-height: 35%;
-  width: 1px;
-  background-color: #fff;
-`;
 
 export function Navbar(props) {
-  const { useTransparent } = props;
+  const { ListSize, useTransparent } = props;
 
   const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
 
@@ -54,9 +63,14 @@ export function Navbar(props) {
     <NavbarContainer useTransparent={useTransparent}>
       <BrandLogo />
       <AccessibilityContainer>
-        {!isMobile && <AnchorLink>Specialists Portal</AnchorLink>}
-        {!isMobile && <Marginer direction="horizontal" margin={10} />}
-        {!isMobile && <Seperator />}
+        <Link to="/src/App.js"><ListImage size={ListSize}>
+          <img src={WishList} alt="list"/></ListImage>
+        </Link>
+        <Marginer direction="horizontal" margin={6} />
+        <Link to="/src/App.js"><ListImage size={ListSize}>
+          <img src={Cart} alt="cart"/></ListImage>
+        </Link>
+        <Marginer direction="horizontal" margin={6} />
         <Marginer direction="horizontal" margin={10} />
         <Link to="/customer/access/signup">
           <Button size={11}>Register</Button>

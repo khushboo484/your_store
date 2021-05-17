@@ -10,8 +10,9 @@ const BrandLogoContainer = styled.div`
 `;
 
 const LogoImage = styled.div`
-  width: ${({ size }) => (size ? size + "px" : "2em")};
-  height: ${({ size }) => (size ? size + "px" : "2em")};
+  width: ${({ size }) => (size ? size + "px" : "4em")};
+  height: ${({ size }) => (size ? size + "px" : "4em")};
+  padding-top: 4px;
 
   img {
     width: 100%;
@@ -21,9 +22,9 @@ const LogoImage = styled.div`
 
 const LogoTitle = styled.h2`
   margin: 0;
-  font-size: ${({ size }) => (size ? size + "px" : "20px")};
-  color: ${({ color }) => (color ? color : "#fff")};
-  font-weight: 900;
+  font-size: ${({ size }) => (size ? size + "px" : "15px")};
+  color: ${({ color }) => (color ? color : "#CD5C5C")};
+  font-weight: 600;
   margin-left: 6px;
 `;
 
@@ -39,13 +40,13 @@ export function BrandLogo(props) {
       {!hideLogo && (
         <Link to="/">
           <LogoImage size={logoSize}>
-            <img src={LogoImg} alt="Servycing logo" />
+            <img src={LogoImg} alt="Junction logo" />
           </LogoImage>
         </Link>
       )}
       <StyledLink to="/">
         <LogoTitle size={textSize} color={color}>
-          Servycing
+          Meal Junction
         </LogoTitle>
       </StyledLink>
     </BrandLogoContainer>

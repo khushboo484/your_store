@@ -1,18 +1,15 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
-import { BrandLogo } from "../../components/brandLogo";
-import { Button } from "../../components/button";
 import { Marginer } from "../../components/marginer";
 import { deviceSize } from "../../components/responsive";
 
-import TopSectionBackgroundImg from "../../images/landing-page.jpg";
-import TheBestSpecialistsImg from "../../images/Work only with the best.png";
+import TheBestSpecialistsImg from "../../images/img.jpg";
 
 const TopSectionContainer = styled.div`
   width: 100%;
-  height: 800px;
-  background: url(${TopSectionBackgroundImg}) no-repeat;
+  height: 500px;
+  background-color : #FFDAB9; 
   background-position: 0px -150px;
   background-size: cover;
 
@@ -25,22 +22,22 @@ const TopSectionContainer = styled.div`
 const BackgroundFilter = styled.div`
   width: 100%;
   height: 100%;
-  background-color: rgba(38, 70, 83, 0.9);
   display: flex;
   flex-direction: column;
 `;
 
 const TopSectionInnerContainer = styled.div`
+  padding-left : 0px;
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+  margin-top: 60px;
   justify-content: space-evenly;
 `;
 
 const StandoutImage = styled.div`
-  width: 44em;
-  height: 34em;
+  width: 25em;
+  height: 20em;
 
   img {
     width: 100%;
@@ -49,6 +46,9 @@ const StandoutImage = styled.div`
 `;
 
 const LogoContainer = styled.div`
+  margin-top: 50px;
+  margin-left: -100px;
+  margin-bottom: 120px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -58,15 +58,37 @@ const LogoContainer = styled.div`
   }
 `;
 
+const Text = styled.p`
+  margin: 4px;
+  line-height: 0.5;
+  color: #A9A9A9;
+  font-size: 20px;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    font-size: 15px;
+  }
+`;
 const SloganText = styled.h3`
   margin: 0;
   line-height: 1.4;
-  color: #fff;
+  color: #000000;
   font-weight: 500;
   font-size: 35px;
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 24px;
+  }
+`;
+
+const HeadText = styled.h4`
+  margin: 0;
+  line-height: 1.0;
+  color: #000000;
+  font-weight: 800;
+  font-size: 25px;
+
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    font-size: 14px;
   }
 `;
 
@@ -81,22 +103,20 @@ export function TopSection(props) {
         {children}
         <TopSectionInnerContainer>
           <LogoContainer>
-            <BrandLogo
-              logoSize={isMobile ? 40 : 65}
-              textSize={isMobile ? 35 : 55}
-            />
-            <Marginer direction="vertical" margin={8} />
-            <SloganText>Find the right specialist</SloganText>
-            <SloganText>For the job</SloganText>
-            <Marginer direction="vertical" margin={15} />
-            <Button>Join Now</Button>
+            <Marginer direction="vertical" margin={6} />
+            <SloganText>Order food/grocery anytime</SloganText>
+            <SloganText>and anywhere. </SloganText>
+            <Marginer direction="vertical" margin={12} />
+            <Text>Hey! Delicious food is waiting for you, we </Text>
+            <Text>are always near to you. </Text>
           </LogoContainer>
           {!isMobile && (
             <StandoutImage>
-              <img src={TheBestSpecialistsImg} alt="best in the field" />
+              <img src={TheBestSpecialistsImg} alt="food" />
             </StandoutImage>
           )}
         </TopSectionInnerContainer>
+        <HeadText>Three Easy steps </HeadText>
       </BackgroundFilter>
     </TopSectionContainer>
   );
