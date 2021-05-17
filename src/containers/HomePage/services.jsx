@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Button } from "../../components/button";
 import { deviceSize } from "../../components/responsive";
-import { ServiceCard } from "../../components/serviceCard";
+import { Steps } from "../../components/steps";
 
 const ServicesContainer = styled.div`
   width: 100%;
@@ -79,18 +79,7 @@ export function Services(props) {
 
   return (
     <ServicesContainer>
-      <Title>Most used services & More</Title>
-      <ServicesWrapper>
-        {isServicesEmpty && !isLoading && (
-          <WarningText>No Services are published yet!</WarningText>
-        )}
-        {isLoading && <WarningText>Loading...</WarningText>}
-        {!isServicesEmpty &&
-          !isLoading &&
-          offeredServices.map((service, idx) => (
-            <ServiceCard key={idx} {...service} />
-          ))}
-      </ServicesWrapper>
+      <Steps/>
       <BottomContainer>
         {!isServicesEmpty && !isLoading && (
           <ViewMoreButton>View More</ViewMoreButton>

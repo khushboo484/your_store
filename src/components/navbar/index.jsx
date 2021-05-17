@@ -53,7 +53,6 @@ const AnchorLink = styled(Link)`
   }
 `;
 
-
 export function Navbar(props) {
   const { ListSize, useTransparent } = props;
 
