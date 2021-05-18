@@ -9,7 +9,7 @@ import TheBestSpecialistsImg from "../../images/img.jpg";
 const TopSectionContainer = styled.div`
   width: 100%;
   height: 500px;
-  background-color : #FFDAB9; 
+  background-color : #98FB98;
   background-position: 0px -150px;
   background-size: cover;
 
@@ -59,7 +59,7 @@ const LogoContainer = styled.div`
 `;
 
 const Text = styled.p`
-  margin: 4px;
+  margin: 5px;
   line-height: 0.5;
   color: #A9A9A9;
   font-size: 20px;
@@ -72,7 +72,7 @@ const SloganText = styled.h3`
   margin: 0;
   line-height: 1.4;
   color: #000000;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 35px;
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
@@ -82,10 +82,11 @@ const SloganText = styled.h3`
 
 const HeadText = styled.h4`
   margin: 0;
-  line-height: 1.0;
+  margin-bottom: 5px;
+  line-height: 0.8;
   color: #000000;
-  font-weight: 800;
-  font-size: 25px;
+  font-weight: 600;
+  font-size: 24px;
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 14px;
@@ -105,10 +106,10 @@ export function TopSection(props) {
           <LogoContainer>
             <Marginer direction="vertical" margin={6} />
             <SloganText>Order food/grocery anytime</SloganText>
-            <SloganText>and anywhere. </SloganText>
+            <SloganText>& anywhere. </SloganText>
             <Marginer direction="vertical" margin={12} />
-            <Text>Hey! Delicious food is waiting for you, we </Text>
-            <Text>are always near to you. </Text>
+            <Text>Hey! Delicious food is waiting for you, we are always </Text>
+            <Text>near to you. </Text>
           </LogoContainer>
           {!isMobile && (
             <StandoutImage>

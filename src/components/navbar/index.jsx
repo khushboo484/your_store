@@ -23,8 +23,10 @@ const NavbarContainer = styled.div`
 `;
 
 const ListImage = styled.div`
-  width: ${({ size }) => (size ? size + "px" : "3em")};
-  height: ${({ size }) => (size ? size + "px" : "3em")};
+  color : 	#98FB98;
+  transition: background-color, 200ms ease-in-out;
+  width: ${({ size }) => (size ? size + "px" : "2em")};
+  height: ${({ size }) => (size ? size + "px" : "2em")};
   padding-top: 4px;
 
   img {

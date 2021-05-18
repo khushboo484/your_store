@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { Footer } from "../../components/footer";
 import { Marginer } from "../../components/marginer";
 import { Navbar } from "../../components/navbar";
+import { Steps } from "../../components/steps";
 import {
   InnerPageContainer,
   PageContainer,
 } from "../../components/pageContainer";
 import { deviceSize } from "../../components/responsive";
-import { SpecialistAd } from "../../components/specialistAd";
-import { Services } from "./services";
+import { Specialist } from "../../components/speciaList";
 import { TopSection } from "./topSection";
 
 const ContentContainer = styled.div`
@@ -31,13 +31,13 @@ export function HomePage(props) {
       <TopSection>
         <Navbar useTransparent />
       </TopSection>
+      <Steps />
       <InnerPageContainer>
         <Marginer direction="vertical" margin="2em" />
         <ContentContainer>
-          <Services />
         </ContentContainer>
         <Marginer direction="vertical" margin="5em" />
-        <SpecialistAd />
+        <Specialist />
         <Marginer direction="vertical" margin="5em" />
       </InnerPageContainer>
       <Footer />

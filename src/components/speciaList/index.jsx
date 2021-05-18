@@ -1,17 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { BrandLogo } from "../brandLogo";
 import { Marginer } from "../marginer";
 
-import { Button } from "../button";
 import { deviceSize } from "../responsive";
 import { useMediaQuery } from "react-responsive";
 
-const SpecialistAdContainer = styled.div`
+const SpecialistContainer = styled.div`
   width: 100%;
   height: 500px;
   display: flex;
-  background-color: #264653;
   align-items: center;
   justify-content: center;
 `;
@@ -68,30 +65,14 @@ const StandoutImage = styled.div`
   }
 `;
 
-export function SpecialistAd(props) {
+export function Specialist(props) {
   const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
 
   return (
-    <SpecialistAdContainer>
+    <SpecialistContainer>
       <ContentContainer>
-        <SloganContainer>
-          <BrandLogo
-            logoSize={isMobile ? 33 : 40}
-            textSize={isMobile ? 28 : 35}
-          />
-          <Marginer direction="vertical" margin="1em" />
-          <SloganContainer>
-            <Slogan>You’re a Specialist, and you </Slogan>
-            <Slogan>have an outstanding</Slogan>
-            <Slogan>Service to offer?</Slogan>
-          </SloganContainer>
-          <Marginer direction="vertical" margin="0.8em" />
-          <Button size={15}>Join as Specialist</Button>
-        </SloganContainer>
-        <StandoutImage>
-          <img alt="join-as-specialist" />
-        </StandoutImage>
+        
       </ContentContainer>
-    </SpecialistAdContainer>
+    </SpecialistContainer>
   );
 }

@@ -1,10 +1,9 @@
-import React, { createContext, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { LoginForm } from "./loginForm";
 import { AccountContext } from "./context";
 import { SignupForm } from "./signupForm";
-import { MutedLink } from "./common";
 
 const BoxContainer = styled.div`
   width: 280px;

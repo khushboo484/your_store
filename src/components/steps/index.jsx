@@ -8,8 +8,9 @@ import { deviceSize } from "../responsive";
 import { useMediaQuery } from "react-responsive";
 
 const Container = styled.div`
+    margin-bottom: 10px;
     width: 100%;
-    height: 400px;
+    height: 300px;
     display: flex;
     align-items: top;
     justify-content:space-between;
@@ -34,10 +35,10 @@ const StepImage = styled.div`
 `;
 
 const LabelText = styled.p`
-  margin: 4px;
-  line-height: 0.5;
+  margin: 5px;
+  line-height: 0.4;
   color: #000000;
-  font-size: 20px;
+  font-size: 16px;
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
     font-size: 15px;
