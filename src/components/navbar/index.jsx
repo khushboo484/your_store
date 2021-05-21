@@ -5,6 +5,7 @@ import  WishList  from "../../images/logos/wishlist.png";
 import Cart from "../../images/logos/cart.png";
 import { Button } from "../button";
 import { Marginer } from "../marginer";
+import { Input } from "../input";
 
 import { Link } from "react-router-dom";
 import { deviceSize } from "../responsive";
@@ -63,6 +64,7 @@ export function Navbar(props) {
   return (
     <NavbarContainer useTransparent={useTransparent}>
       <BrandLogo />
+      <Input size={20} placeholder={ "Search for anything" }/>
       <AccessibilityContainer>
         <Link to="/src/App.js"><ListImage size={ListSize}>
           <img src={WishList} alt="list"/></ListImage>

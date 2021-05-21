@@ -10,7 +10,7 @@ import { useMediaQuery } from "react-responsive";
 const Container = styled.div`
     margin-bottom: 10px;
     width: 100%;
-    height: 300px;
+    height: 200px;
     display: flex;
     align-items: top;
     justify-content:space-between;

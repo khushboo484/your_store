@@ -6,8 +6,10 @@ import { deviceSize } from "../responsive";
 import { useMediaQuery } from "react-responsive";
 
 const SpecialistContainer = styled.div`
+  border: 2px solid black;
   width: 100%;
-  height: 500px;
+  height: 600px;
+  margin: 0px;
   display: flex;
   align-items: center;
   justify-content: center;

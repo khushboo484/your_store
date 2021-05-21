@@ -8,6 +8,7 @@ import { deviceSize } from "../responsive";
 import { useMediaQuery } from "react-responsive";
 
 const FooterContainer = styled.div`
+  border: 2px solid black;
   width: 100%;
   min-height: 350px;
   background-color: #2F4F4F;
@@ -23,6 +24,7 @@ const FooterContainer = styled.div`
 `;
 
 const HeadContainer = styled.div`
+border: 2px solid green;
   width: 100%;
   diplay: flex;
   margin: 0;
@@ -31,6 +33,7 @@ const HeadContainer = styled.div`
 `;
 
 const TopContainer = styled.div`
+border: 2px solid yellow;
   width: 100%;
   height: 180px;
   display: flex;
@@ -39,6 +42,7 @@ const TopContainer = styled.div`
 `;
 
 const ContentContainer = styled.div`
+border: 2px solid white;
   height: 150px;
   width: 200px;
   display: flex;
@@ -49,6 +53,7 @@ const ContentContainer = styled.div`
 `;
 
 const BottomContainer = styled.div`
+border: 2px solid yellow;
   display: flex;
   justify-content: space-between;
   align-items: center;

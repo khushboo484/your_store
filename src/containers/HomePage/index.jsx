@@ -11,9 +11,12 @@ import {
 import { deviceSize } from "../../components/responsive";
 import { Specialist } from "../../components/speciaList";
 import { TopSection } from "./topSection";
+import { MenuItems } from "../../components/menuItems";
 
 const ContentContainer = styled.div`
+  border: 2px solid yellow;
   width: 100%;
+  height: 400px;
   max-width: ${deviceSize.laptop}px;
   display: flex;
   flex-direction: column;
@@ -24,7 +27,19 @@ const ContentContainer = styled.div`
     padding: 5px;
   }
 `;
+const Heading = styled.h4`
+  width: 100%;
+  margin: 0;
+  line-height: 0.8;
+  color: #000000;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
 
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    font-size: 14px;
+  }
+`;
 export function HomePage(props) {
   return (
     <PageContainer>
@@ -33,8 +48,9 @@ export function HomePage(props) {
       </TopSection>
       <Steps />
       <InnerPageContainer>
-        <Marginer direction="vertical" margin="2em" />
         <ContentContainer>
+          <Heading> Our Menus </Heading>
+          <MenuItems/>
         </ContentContainer>
         <Marginer direction="vertical" margin="5em" />
         <Specialist />
