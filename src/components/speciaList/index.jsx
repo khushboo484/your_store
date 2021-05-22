@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Marginer } from "../marginer";
-
 import { deviceSize } from "../responsive";
 import { useMediaQuery } from "react-responsive";
 

@@ -8,9 +8,9 @@ import { deviceSize } from "../responsive";
 import { useMediaQuery } from "react-responsive";
 
 const FooterContainer = styled.div`
-  border: 2px solid black;
+  margin-top: 20px;
   width: 100%;
-  min-height: 350px;
+  min-height: 300px;
   background-color: #2F4F4F;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,6 @@ const FooterContainer = styled.div`
 `;
 
 const HeadContainer = styled.div`
-border: 2px solid green;
   width: 100%;
   diplay: flex;
   margin: 0;
@@ -33,7 +32,6 @@ border: 2px solid green;
 `;
 
 const TopContainer = styled.div`
-border: 2px solid yellow;
   width: 100%;
   height: 180px;
   display: flex;
@@ -42,7 +40,6 @@ border: 2px solid yellow;
 `;
 
 const ContentContainer = styled.div`
-border: 2px solid white;
   height: 150px;
   width: 200px;
   display: flex;
@@ -53,7 +50,6 @@ border: 2px solid white;
 `;
 
 const BottomContainer = styled.div`
-border: 2px solid yellow;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,7 +74,7 @@ const Title = styled.h5`
   margin-bottom: 5px;
   color: 	#98FB98;
   font-weight: 200;
-  font-size: 16px;
+  font-size: 18px;
 `;
 
 const Head = styled.h2`
@@ -99,8 +95,8 @@ const Detail = styled.p`
 const FLink = styled.a`
   text-decoration: none;
   color: #FFFAFA;
-  font-weight: 100;
-  font-size: 12px;
+  font-weight: 300;
+  font-size: 15px;
   cursor: pointer;
 
   &:not(:last-of-type) {
@@ -110,7 +106,7 @@ const FLink = styled.a`
 
 const PrivacyText = styled.h6`
   color: #a3a3a3;
-  font-size: 11px;
+  font-size: 13px;
   margin: 0;
   margin-left: 10px;
   display: flex;
