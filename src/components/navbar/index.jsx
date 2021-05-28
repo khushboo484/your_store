@@ -68,7 +68,7 @@ export function Navbar(props) {
           <img src={WishList} alt="list"/></ListImage>
         </Link>
         <Marginer direction="horizontal" margin={6} />
-        <Link to="/src/App.js"><ListImage size={ListSize}>
+        <Link to="../cart"><ListImage size={ListSize}>
           <img src={Cart} alt="cart"/></ListImage>
         </Link>
         <Marginer direction="horizontal" margin={6} />
