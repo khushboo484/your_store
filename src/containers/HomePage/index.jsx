@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { Footer } from "../../components/footer";
 import { Marginer } from "../../components/marginer";
 import { Navbar } from "../../components/navbar";
@@ -7,9 +8,15 @@ import {
   InnerPageContainer,
   PageContainer,
 } from "../../components/pageContainer";
-import { Specialist } from "../../components/speciaList";
 import { TopSection } from "./topSection";
 import { ListSection } from "./listSection";
+import { ProdSection } from "./prodSection";
+
+const Heading = styled.h1`
+  font-weight: 600;
+  font-size: 50px;
+  color: red;
+`;
 
 export function HomePage(props) {
   return (
@@ -20,9 +27,9 @@ export function HomePage(props) {
       <Steps />
       <InnerPageContainer>
         <ListSection />
-        <Marginer direction="vertical" margin="5em" />
-        <Specialist />
-        <Marginer direction="vertical" margin="5em" />
+        <Heading> Products </Heading>
+        <ProdSection />
+        <Marginer direction="vertical" margin="4em" />
       </InnerPageContainer>
       <Footer />
     </PageContainer>
