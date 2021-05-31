@@ -1,7 +1,8 @@
-import React, {createContext, useContext} from "react";
+import React, {useContext} from "react";
 import { ProductsContext } from "./context";
 import styled from "styled-components";
 import { Button } from "../button";
+import { Specialist } from "../speciaList";
 
 const ProductContainer = styled.div`
     width: 90%;
@@ -19,7 +20,7 @@ const EachContainer = styled.div`
 
 const ProdImage = styled.div`
     width: 100%;
-    height: 200px;
+    height: 250px;
     overflow: hidden;
     border-radius: 4px;
 
@@ -30,7 +31,7 @@ const ProdImage = styled.div`
 `;
 
 const Detail = styled.div`
-    padding: 15px 10px;
+    padding: 10px 8px;
     text-align: center;
     background-color: white;
     border-left: 1px solid #FAFAFA;
@@ -38,40 +39,41 @@ const Detail = styled.div`
 `;
 
 const ProdName = styled.h6`
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500px;
-    margin: 5px 0;
+    margin: 3px 0;
 `;
 
 const ProdPrice = styled.p`
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
-    margin: 5px 0;
+    margin: 2px 0;
 
 `;
 
 const NewProd = styled.div`
     position: absolute;
     top: 0;
-    background-color: greenyellow;
+    background-color: #9ACD32;
     padding: 5px 10px;
-    color: black;
+    color: #000000;
 `;
 
 const HotProd = styled.div`
     position: absolute;
     top: 0;
-    background-color: orangered;
+    background-color: #FF4500;
     padding: 5px 10px;
-    color: black;
+    color: #000000;
 `;
 
 
-export function Products() {
+export function Products(props) {
 
     const {products} = useContext(ProductsContext);
     
     return(
+        <Specialist>
         <ProductContainer>
             {products.map((product) => (
                 <EachContainer key={product.id}>
@@ -83,16 +85,17 @@ export function Products() {
                             {product.name}
                         </ProdName>
                         <ProdPrice>
-                            Rs.{product.price}.00
+                            Rs {product.price}.00
                         </ProdPrice>
                     </Detail>
-                    {product.staus == 'hot' ? <HotProd>Hot</HotProd>: ' '}
-                    {product.staus == 'new' ? <NewProd>New</NewProd>: ' '}
+                    {product.staus === 'hot' ? <HotProd>Hot</HotProd>: ' '}
+                    {product.staus === 'new' ? <NewProd>New</NewProd>: ' '}
                     <Button size={20} className="add-to-cart">
                         add to cart
                     </Button>
                 </EachContainer>
             ))}
         </ProductContainer>
+        </Specialist>
     );
 }

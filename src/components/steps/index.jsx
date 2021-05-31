@@ -5,7 +5,6 @@ import Waiting from "../../images/wait.png";
 import Delivering from "../../images/deliver.jpg";
 import Delivered from "../../images/done.jpg";
 import { deviceSize } from "../responsive";
-import { useMediaQuery } from "react-responsive";
 
 const Container = styled.div`
     margin-bottom: 10px;
@@ -48,7 +47,6 @@ const LabelText = styled.p`
 export function Steps(props) {
     const { ImgSize } = props;
 
-    const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
 
     return (
         <Container>

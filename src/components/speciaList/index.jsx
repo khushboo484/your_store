@@ -1,6 +1,5 @@
 import React, { useState }  from "react";
-import { deviceSize } from "../responsive";
-import { useMediaQuery } from "react-responsive";
+
 import { ProductsContext } from "../products/context";
 
 import IMG1 from "../../images/img1.jpg";
@@ -26,29 +25,28 @@ import IMG20 from "../../images/img20.jpg";
 
 
 export function Specialist(props) {
-  const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
 
   const [products] = useState([
-    {id: 1, name: 'Dosa', price: 200, image: IMG1, status: 'hot'},
-    {id: 2, name: 'Dosa', price: 200, image: IMG2, status: 'hot'},
-    {id: 3, name: 'Dosa', price: 200, image: IMG3, status: 'hot'},
-    {id: 4, name: 'Dosa', price: 200, image: IMG4, status: 'hot'},
-    {id: 5, name: 'Dosa', price: 200, image: IMG5, status: 'hot'},
-    {id: 6, name: 'Dosa', price: 200, image: IMG6, status: 'hot'},
-    {id: 7, name: 'Dosa', price: 200, image: IMG7, status: 'hot'},
-    {id: 8, name: 'Dosa', price: 200, image: IMG8, status: 'hot'},
-    {id: 9, name: 'Dosa', price: 200, image: IMG9, status: 'hot'},
-    {id: 10, name: 'Dosa', price: 200, image: IMG10, status: 'hot'},
-    {id: 11, name: 'Dosa', price: 200, image: IMG11, status: 'hot'},
-    {id: 12, name: 'Dosa', price: 200, image: IMG12, status: 'hot'},
-    {id: 13, name: 'Dosa', price: 200, image: IMG13, status: 'hot'},
-    {id: 14, name: 'Dosa', price: 200, image: IMG14, status: 'hot'},
-    {id: 15, name: 'Dosa', price: 200, image: IMG15, status: 'hot'},
-    {id: 16, name: 'Dosa', price: 200, image: IMG16, status: 'hot'},
-    {id: 17, name: 'Dosa', price: 200, image: IMG17, status: 'hot'},
-    {id: 18, name: 'Dosa', price: 200, image: IMG18, status: 'hot'},
-    {id: 19, name: 'Dosa', price: 200, image: IMG19, status: 'hot'},
-    {id: 20, name: 'Dosa', price: 200, image: IMG20, status: 'hot'}
+    {id: 1, name: 'Masala Dosa', price: 200, image: IMG1, status: 'hot'},
+    {id: 2, name: 'Idli Sambhar', price: 120, image: IMG2, status: 'New'},
+    {id: 3, name: 'Papdi chat', price: 50, image: IMG3, status: 'New'},
+    {id: 4, name: 'Vada ', price: 50, image: IMG4, status: 'hot'},
+    {id: 5, name: 'Khaman Dhokla', price: 80, image: IMG5, status: 'hot'},
+    {id: 6, name: 'Khakra', price: 20, image: IMG6, status: 'New'},
+    {id: 7, name: 'Khandvi', price: 70, image: IMG7, status: 'hot'},
+    {id: 8, name: 'Chola Bhatura', price: 50, image: IMG8, status: 'hot'},
+    {id: 9, name: 'Sev puri', price: 35, image: IMG9, status: 'New'},
+    {id: 10, name: 'Extra Cheese Pizza', price: 300, image: IMG10, status: 'hot'},
+    {id: 11, name: 'Chicken Pizza', price: 250, image: IMG11, status: 'New'},
+    {id: 12, name: 'Burger & Fries Combo', price: 100, image: IMG12, status: 'hot'},
+    {id: 13, name: 'Manchurian', price: 120, image: IMG13, status: 'New'},
+    {id: 14, name: 'Noodles', price: 80, image: IMG14, status: 'hot'},
+    {id: 15, name: 'Spring roll', price: 50, image: IMG15, status: 'New'},
+    {id: 16, name: 'Momos', price: 60, image: IMG16, status: 'New'},
+    {id: 17, name: 'Chocolate Cake', price: 350, image: IMG17, status: 'hot'},
+    {id: 18, name: 'Vanilla Cake', price: 320, image: IMG18, status: 'New'},
+    {id: 19, name: 'Mango Smoothie', price: 150, image: IMG19, status: 'New'},
+    {id: 20, name: 'Oreo MilkShake', price: 100, image: IMG20, status: 'hot'}
 
   ]);
   return (

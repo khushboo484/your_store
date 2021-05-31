@@ -10,7 +10,7 @@ import { useMediaQuery } from "react-responsive";
 const FooterContainer = styled.div`
   margin-top: 20px;
   width: 100%;
-  min-height: 300px;
+  min-height: 250px;
   background-color: #2F4F4F;
   display: flex;
   flex-direction: column;
@@ -35,7 +35,6 @@ const TopContainer = styled.div`
   width: 100%;
   height: 180px;
   display: flex;
-  margin-bottom: 1em;
   align-items: center;
 `;
 

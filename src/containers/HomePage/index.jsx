@@ -10,7 +10,9 @@ import {
 } from "../../components/pageContainer";
 import { TopSection } from "./topSection";
 import { ListSection } from "./listSection";
-import { ProdSection } from "./prodSection";
+import { ProdSection } from './prodSection';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Cart } from "../../components/cart";
 
 const Heading = styled.h1`
   font-weight: 600;
@@ -27,8 +29,13 @@ export function HomePage(props) {
       <Steps />
       <InnerPageContainer>
         <ListSection />
+        <Router>
         <Heading> Products </Heading>
-        <ProdSection />
+        <Switch>
+          <Route path="/" exact component={ProdSection} />
+          <Route path="/cart" exact component={Cart} />
+        </Switch>
+        </Router>
         <Marginer direction="vertical" margin="4em" />
       </InnerPageContainer>
       <Footer />

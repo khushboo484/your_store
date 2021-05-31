@@ -7,7 +7,6 @@ import {
   InnerPageContainer,
   PageContainer,
 } from "../../components/pageContainer";
-
 import { useParams } from "react-router-dom";
 
 const StyledInnerContainer = styled(InnerPageContainer)`

@@ -2,13 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { BrandLogo } from "../brandLogo";
 import  WishList  from "../../images/logos/wishlist.png";
-import Cart from "../../images/logos/cart.png";
+import CartImg from "../../images/logos/cart.png";
 import { Button } from "../button";
 import { Marginer } from "../marginer";
-
 import { Link } from "react-router-dom";
-import { deviceSize } from "../responsive";
-import { useMediaQuery } from "react-responsive";
 
 const NavbarContainer = styled.div`
   width: 100%;
@@ -42,8 +39,8 @@ const AccessibilityContainer = styled.div`
 `;
 
 const AnchorLink = styled(Link)`
-  font-size: 12px;
-  font-weight: 400px;
+  font-size: 14px;
+  font-weight: 500px;
   color: #000000;
   cursor: pointer;
   text-decoration: none;
@@ -58,7 +55,6 @@ const AnchorLink = styled(Link)`
 export function Navbar(props) {
   const { ListSize, useTransparent } = props;
 
-  const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
 
   return (
     <NavbarContainer useTransparent={useTransparent}>
@@ -68,8 +64,8 @@ export function Navbar(props) {
           <img src={WishList} alt="list"/></ListImage>
         </Link>
         <Marginer direction="horizontal" margin={6} />
-        <Link to="../cart"><ListImage size={ListSize}>
-          <img src={Cart} alt="cart"/></ListImage>
+        <Link to="../../components/cart"><ListImage size={ListSize}>
+          <img src={CartImg} alt="cart"/></ListImage>
         </Link>
         <Marginer direction="horizontal" margin={6} />
         <Marginer direction="horizontal" margin={10} />

@@ -1,15 +1,11 @@
-import React, { createContext, useReducer } from "react";
-import { CartReducer } from "./CartReduer";
+import React from "react";
 
-export const CartContent = createContext();
+export function Cart(props) {
 
-export  function Cart(props) {
-
-    const [cart, dispatch] = useReducer(CartReducer, {shoppingCart: [], total:  0, qty: 0});
-    
     return (
-        <CartContent.Provider value={{...cart, dispatch}}>
-            {props.children}
-        </CartContent.Provider>
+        <h1> Shopping Cart </h1>
+        // <CartContent.Provider value={{...cart, dispatch}}>
+        //     {props.children}
+        // </CartContent.Provider>
     )
 }
