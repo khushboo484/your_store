@@ -3,6 +3,7 @@ import { ProductsContext } from "./context";
 import styled from "styled-components";
 import { Button } from "../button";
 import { Specialist } from "../speciaList";
+import { CartContext } from "../cart/context";
 
 const ProductContainer = styled.div`
     width: 90%;
@@ -71,7 +72,9 @@ const HotProd = styled.div`
 export function Products(props) {
 
     const {products} = useContext(ProductsContext);
-    
+    const {dispatch} = useContext(CartContext);
+
+
     return(
         <Specialist>
         <ProductContainer>
@@ -90,8 +93,8 @@ export function Products(props) {
                     </Detail>
                     {product.staus === 'hot' ? <HotProd>Hot</HotProd>: ' '}
                     {product.staus === 'new' ? <NewProd>New</NewProd>: ' '}
-                    <Button size={20} className="add-to-cart">
-                        add to cart
+                    <Button size={20} className="add-to-cart" onClick={ dispatch({type: 'ADD_TO_CART', id: product.id, product}) }>
+                        Add to cart
                     </Button>
                 </EachContainer>
             ))}

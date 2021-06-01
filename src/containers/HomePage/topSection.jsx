@@ -3,7 +3,6 @@ import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
 import { deviceSize } from "../../components/responsive";
-
 import TheBestSpecialistsImg from "../../images/img.jpg";
 
 const TopSectionContainer = styled.div`

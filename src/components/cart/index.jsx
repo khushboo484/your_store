@@ -1,11 +1,16 @@
-import React from "react";
+import React, {useContext} from 'react';
+import { CartContext } from "./context";
 
-export function Cart(props) {
+export function Cart() {
 
-    return (
-        <h1> Shopping Cart </h1>
-        // <CartContent.Provider value={{...cart, dispatch}}>
-        //     {props.children}
-        // </CartContent.Provider>
+const data = useContext(CartContext);
+console.log(data);
+
+    return(
+        <div>
+            <div>
+                <h2> Shopping Cart !</h2>
+            </div>
+        </div>
     )
 }

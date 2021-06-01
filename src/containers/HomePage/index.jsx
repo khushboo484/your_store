@@ -12,6 +12,7 @@ import { TopSection } from "./topSection";
 import { ListSection } from "./listSection";
 import { ProdSection } from './prodSection';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { CartContextProvider } from "../../components/cart/CartContextProvider";
 import { Cart } from "../../components/cart";
 
 const Heading = styled.h1`
@@ -27,6 +28,7 @@ export function HomePage(props) {
         <Navbar useTransparent />
       </TopSection>
       <Steps />
+      <CartContextProvider>
       <InnerPageContainer>
         <ListSection />
         <Router>
@@ -34,10 +36,12 @@ export function HomePage(props) {
         <Switch>
           <Route path="/" exact component={ProdSection} />
           <Route path="/cart" exact component={Cart} />
+          {/* <Route component={ NotFound } /> */}
         </Switch>
         </Router>
         <Marginer direction="vertical" margin="4em" />
       </InnerPageContainer>
+      </CartContextProvider>
       <Footer />
     </PageContainer>
   );
